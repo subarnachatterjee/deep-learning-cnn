@@ -5,14 +5,25 @@ Benchmarking 3 CNN architectures on Fashion-MNIST (70,000 images, 10 classes).
 ## Tech Stack
 Python · PyTorch · torchvision · matplotlib · seaborn
 
-## Architectures
+## Results
+
+### Training Curves
+![Training Curves](results/training_curves.png)
+
+### Architecture Comparison
+![Accuracy Comparison](results/accuracy_comparison.png)
+
+## Model Benchmarks
 | Model | Best Val Accuracy |
 |---|---|
-| BaseCNN | ~88% |
-| DeepCNN | ~91% |
-| ResNetStyle | ~92% |
+| BaseCNN | 90.38% |
+| DeepCNN | 91.54% |
+| **ResNetStyle** | **91.98%** |
 
-## Project Structuredeep-learning-cnn/
+ResNetStyle achieves 91.98% validation accuracy, outperforming BaseCNN by 1.6% through residual connections, BatchNorm and targeted augmentation.
+
+## Project Structure
+deep-learning-cnn/
 ├── src/
 │   ├── data_loader.py   # Fashion-MNIST with augmentation
 │   ├── models.py        # BaseCNN, DeepCNN, ResNetStyle
